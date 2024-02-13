@@ -1,6 +1,8 @@
 :root {
     --btn-bg-color: #596D48;
     --input-border-color: #E5E7EB;
+    /* --right-bg-color: #e4e4e4; */
+    --right-bg-color: #f9fafb;
 }
 
 @font-face {
@@ -17,7 +19,7 @@ body {
 }
 
 .left-content {
-    min-width: max(30%, 18rem);
+    min-width: max(30%, 275px);
     background-image: url('./assets/leaves.avif');
     background-size: cover;
     background-repeat: no-repeat;
@@ -26,17 +28,16 @@ body {
 }
 
 .logo-container {
-    background-color: rgba(0, 0, 0, 0.4);
-    font-family: norse-bold, sans-serif;
-    font-size: 6rem;
-    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem 0;
-    width: 100%;
     position: absolute;
     top: 20%;
+    padding: 1rem 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-family: norse-bold, sans-serif;
+    font-size: max(6rem);
 }
 
 .logo-container>img {
@@ -44,16 +45,79 @@ body {
 }
 
 .photo-source {
-    font-family: system-ui, sans-serif;
-    font-weight: 300;
-    font-size: 0.9rem;
     position: absolute;
     bottom: 1rem;
     width: 100%;
     text-align: center;
+    font-family: system-ui, sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
 }
 
 .photo-source > a,
 .photo-source > a:visited {
     color: white;
 }
+
+.right-content {
+    background-color: var(--right-bg-color);
+    padding-top: 5%;
+    font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+}
+
+.right-content > * {
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+.right-content > h2 {
+    width: max(55%, 500px);
+    font-weight: 800;
+}
+
+.right-content > form > h2 {
+    margin-top: 0;
+}
+
+.right-content > form {
+    background-color: white;
+    margin-left: 0;
+    padding: 0.5rem 2rem 2rem;
+}
+
+.form-input > label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    color: rgb(95, 95, 95);
+    font-weight: bold;
+}
+
+.form-input > input {
+    line-height: 1.5rem;
+    border: 1px solid var(--input-border-color);
+    width: 250px;
+}
+
+.form-row {
+    display: flex;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.right-content button {
+    color: white;
+    background-color: var(--btn-bg-color);
+    border: none;
+    padding: 0.8rem 2.2rem;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.right-content > :last-child > a {
+    text-decoration: none;
+    color: var(--btn-bg-color);
+    font-weight: bold;
+}
+
