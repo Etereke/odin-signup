@@ -98,12 +98,41 @@ body {
     line-height: 1.5rem;
     border: 1px solid var(--input-border-color);
     width: 250px;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.form-input > input:focus {
+    outline: none;
+    border: 1px solid blue;
+}
+
+.form-input.error {
+    position: relative;
+}
+
+.form-input.error > label {
+    color: red;
+}
+
+.form-input.error > input {
+    outline: none;
+    border: 1px solid red;
+}
+
+.form-input.error::after {
+    content: '* Passwords must match!';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 0.9rem;
+    color: red;
 }
 
 .form-row {
     display: flex;
     gap: 4rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .right-content button {
